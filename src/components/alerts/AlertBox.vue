@@ -49,9 +49,8 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    left: 516px;
-    top: 219px;
     border-radius: 12px;
+    margin-bottom: 40px;
   }
 
   .white {
@@ -71,7 +70,5 @@ export default {
     background: rgba(57, 204, 51, 0.28);
     border: 2px solid #48A728;
   }
-
-
 
 </style>

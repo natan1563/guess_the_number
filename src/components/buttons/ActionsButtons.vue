@@ -29,7 +29,6 @@
 
 		data() {
 			return {
-				teste: "Sergio"
 			}
 		},
 
@@ -41,8 +40,6 @@
 					disabled: this.setCustomStyles("#E5E5E5", "#D9D9D9"),
 					again: this.setCustomStyles("#00B1F2", "#009AD3"),
 				}
-				
-				console.log(collorsByType[this.typeButton])
 
 				if (this.typeButton in collorsByType) {
 					return collorsByType[this.typeButton]
