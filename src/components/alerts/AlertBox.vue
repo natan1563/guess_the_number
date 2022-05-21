@@ -2,12 +2,14 @@
 
     <div>
         <div 
+          id="alert"
           :class="{
             'danger': type==='danger',
             'white': type==='white',
             'success': type==='success'
             }"
-        >{{desc}}</div>
+        >{{desc}}
+        </div>
     </div>
 
 </template>
@@ -35,17 +37,18 @@ export default {
 
 <style lang="scss" scoped>
 
-  div {
+  div #alert {
     font-family: 'Inter';
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    line-height: 34px;
+    // line-height: 34px;
     box-sizing: border-box;
     width: 402px;
     height: 78px;
-    left: 516px;
-    top: 219px;
+    justify-content: center;
+    // left: 516px;
+    // top: 219px;
     border-radius: 12px;
   }
 
