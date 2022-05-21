@@ -1,8 +1,9 @@
 <template>
 		<div
-			:style="this.buttonCollor()"
+			class="button-default"
+			:style="this.buttonStyles()"
 		>
-			<slot name="icon"></slot>
+			<slot name="icon" class="icon-default"></slot>
 			<slot name="text"></slot>
 		</div>
 </template> 
@@ -17,12 +18,12 @@
 			widthButton: {
 				type: Number,
 				required: false,
-				default: 143
+				default: 130
 			},
 			heightButton: {
 				type: Number,
 				required: false,
-				default: 31
+				default: 40
 			}
 		},
 
@@ -33,22 +34,24 @@
 		},
 
 		methods: {
-			buttonCollor() {
+			buttonStyles() {
 				const collorsByType = {
-					help: this.setCustomStyles({ "#39CC33", "#48A728" }),
-					give: this.setCustomStyles({ "#FF4D54", "#D6151D" }),
-					disabled: this.setCustomStyles({ "#E5E5E5", "#D9D9D9" }),
-					help: this.setCustomStyles({ "#00B1F2", "#009AD3" }),
+					help: this.setCustomStyles("#39CC33", "#48A728"),
+					give: this.setCustomStyles("#FF4D54", "#D6151D"),
+					disabled: this.setCustomStyles("#E5E5E5", "#D9D9D9"),
+					again: this.setCustomStyles("#00B1F2", "#009AD3"),
+				}
+				
+				console.log(collorsByType[this.typeButton])
+
+				if (this.typeButton in collorsByType) {
+					return collorsByType[this.typeButton]
 				}
 
-				if (!this.typeButton in collorsByType) {
-					return
-				}
-
-				return collorsByType[this.typeButton]
+				return
 			},
 
-			setCustomStyles({color, shadowColor}) {
+			setCustomStyles(color, shadowColor) {
 				return {
 					backgroundColor: color,
 					border: `2px solid ${color}`,
@@ -63,7 +66,16 @@
 </script>
 
 <style scoped>
-	div {
-		background-color: white;
-	}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+.button-default {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	font-family: Inter;
+	font-weight: 700;
+	font-size: 18px;
+	padding: 0px 5px;
+	color: #FFFFFF;
+}
 </style>
