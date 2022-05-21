@@ -1,22 +1,42 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <action-button>
+      
+      <template #icon>
+        <i>Icone</i>
+      </template>
+
+      <template #text>
+        <p>Teste</p>
+      </template>
+    </action-button>
+    
+    <AlertBox type="danger" desc="Você só tem mais 1 jogada!"/>
+    <AlertBox type="white" desc="Você ainda tem 8 jogadas!"/>
+    <AlertBox type="success" desc="Parabéns, você venceu!"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ActionButton from './components/buttons/ActionsButtons.vue'
+import AlertBox from '@/components/alerts/AlertBox.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ActionButton,
+    AlertBox
   }
 }
 </script>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
+
+* {
+  background-color: #111;
+}
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
