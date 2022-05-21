@@ -42,13 +42,15 @@ export default {
     font-style: normal;
     font-weight: 700;
     font-size: 28px;
-    // line-height: 34px;
+    line-height: 34px;
     box-sizing: border-box;
     width: 402px;
     height: 78px;
+    display: flex;
+    align-items: center;
     justify-content: center;
-    // left: 516px;
-    // top: 219px;
+    left: 516px;
+    top: 219px;
     border-radius: 12px;
   }
 
