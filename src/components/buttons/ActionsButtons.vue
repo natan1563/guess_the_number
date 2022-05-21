@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
 		<div
 			:style="this.buttonCollor()"
 		>
@@ -66,4 +66,4 @@
 	div {
 		background-color: white;
 	}
-</style>
+</style> -->
