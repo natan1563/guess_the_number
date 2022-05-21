@@ -27,6 +27,11 @@
 			}
 		},
 
+		data() {
+			return {
+			}
+		},
+
 		methods: {
 			buttonStyles() {
 				const collorsByType = {
@@ -47,7 +52,6 @@
 					againDisabled: this.setCustomStyles("#03ABE9", "#03ABE9", "#009AD3"),
 					againHover: this.setCustomStyles("#00B1F2", "#00B1F2"),
 				}
-				
 				if (this.typeButton in collorsByType) {
 					return collorsByType[this.typeButton]
 				}

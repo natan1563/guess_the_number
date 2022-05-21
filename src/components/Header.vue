@@ -18,11 +18,9 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
-div{
+div {
     text-align: center;
-    background-color: white;
-    width: 100%;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);   
+    width: 100%; 
     padding-top: 26px ;
     padding-bottom: 29px;
 }
